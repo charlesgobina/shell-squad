@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Alike&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Alike', serif;
+
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+
+#typewriter-container {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 50px;
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.5s ease;
+}
+
+#cursor {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 8px;
+  height: 5px;
+  background-color: #000;
+  animation: blinkCursor 1s infinite;
+}
+
+::view-transition-group(root) {
+  animation-name: blinkCursor;
+}
+
+@keyframes blinkCursor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

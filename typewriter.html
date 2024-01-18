@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typewriter Effect with Cursor</title>
+    <link rel="stylesheet" href="typestyle.css" />
+  </head>
+  <body>
+    <div id="typewriter-container">
+      <span id="typewriter-text"></span><span id="cursor"></span>
+    </div>
+
+    <script>
+      const textArray = [
+        "Hello, TikTok",
+        "Let's crush this week!",
+        "You got this!",
+      ];
+      let textIndex = 0;
+      let charIndex = 0;
+      const speed = 100; // Adjust the speed as needed
+      const cursorElement = document.getElementById("cursor");
+
+      function typeWriter() {
+        if (charIndex < textArray[textIndex].length) {
+          document.startViewTransition(() => {
+            document.getElementById("typewriter-text").style.viewTransitionName = "typewriter";
+            document.getElementById("typewriter-text").innerHTML +=
+              textArray[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, speed);
+          });
+        } else {
+          // Move to the next text in the array
+          document.startViewTransition(() => {
+            setTimeout(eraseText, 200);
+
+          })
+        }
+      }
+
+      function eraseText() {
+        if (charIndex > 0) {
+          const currentText = textArray[textIndex].substring(0, charIndex - 1);
+          document.getElementById("typewriter-text").innerHTML = currentText;
+          charIndex--;
+          setTimeout(eraseText, speed / 2);
+        } else {
+          // Move to the next text in the array
+          textIndex = (textIndex + 1) % textArray.length;
+          setTimeout(typeWriter, 500);
+        }
+      }
+
+      // Start the typing animation
+      typeWriter();
+    </script>
+  </body>
+</html>

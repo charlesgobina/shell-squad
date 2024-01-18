@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShellSquad</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <span>SQ</span>
+      </div>
+      <div class="burger-menu">
+        <i class='bx bx-menu-alt-left'></i>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Linux</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="linux-bread-crumb">
+      <ul>
+        <li><a href="#">Linux</a></li>
+        <li> / </li>
+        <li><a href="#">Distros</a></li>
+      </ul>
+    </div>
+
+    <h1 class="linux-header">Linux Distributions</h1>
+
+    <ul class="linux-categories">
+      <li>
+        <button class="category active" data-category="all" >All</button>
+      </li>
+      <li>
+        <button class="category" data-category="debian" >Debian</button>
+      </li>
+      <li>
+        <button class="category" data-category="ubuntu" >Ubuntu</button>
+      </li>
+      <li>
+        <button class="category" data-category="arch" >Arch</button>
+      </li>
+      <li>
+        <button class="category" data-category="redhat" >Red hat</button>
+      </li>
+    </ul>
+
+    <ul class="linux-distro-name">
+      <li class="distro all" data-filter="arch" >
+        <span>January 30th 1998 - Arch</span>
+        <h2>Manjaro</h2>
+      </li>
+      <li class="distro all redhat" data-filter="redhat">
+        <span>Februarry 24th 1990 - Red Hat</span>
+        <h2>Rocky Linux</h2>
+      </li>
+      <li class="distro all redhat" data-filter="redhat">
+        <span>Februarry 24th 1990 - Red Hat</span>
+        <h2>Fedora</h2>
+      </li>
+      <li class="distro all ubuntu" data-filter="ubuntu">
+        <span>Februarry 24th 1990 - Ubuntu</span>
+        <h2>Zorin OS</h2>
+      </li>
+      <li class="distro all ubuntu" hidden="hidden" data-filter="ubuntu">
+        <span>Februarry 24th 1990 - Ubuntu</span>
+        <h2>Pop OS</h2>
+      </li>
+      <li class="distro all debian" data-filter="debian">
+        <span>Februarry 24th 1990 - Debian</span>
+        <h2>Ubuntu</h2>
+      </li>
+      <li class="distro al debian" data-filter="debian">
+        <span>Februarry 24th 1990 - Debian</span>
+        <h2>Linux Mint</h2>
+      </li>
+      <li class="distro all arch" data-filter="arch">
+        <span>Februarry 24th 1990 - Arch</span>
+        <h2>Obarun</h2>
+      </li>
+      <li class="distro all debian" data-filter="debian">
+        <span>Februarry 24th 1990 - Debian</span>
+        <h2>Debian</h2>
+      </li>
+      <li class="distro all redhat" data-filter="redhat">
+        <span>Februarry 24th 1990 - Arch</span>
+        <h2>CentOS</h2>
+      </li>
+    </ul>
+
+  </main>
+  <footer>
+    <span>
+      <!--Built with love-->
+      <span>Built with ❤️ - Charles Gobina</span>
+    </span>
+  </footer>
+  
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Alike&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    background-image: url(../assets/images/wall-e.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(240, 240, 240);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px 0;
+
+}
+
+header nav .logo {
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+
+header nav ul {
+  display: flex;
+  gap: 10px;
+}
+
+main, footer {
+  padding: 0 20px;
+}
+
+main {
+  padding-top: 60px;
+  padding-bottom:60px;
+  scale: 1;
+}
+
+
+main .linux-bread-crumb ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+main .linux-bread-crumb ul li:nth-child(odd) {
+  font-size: 14px;
+  background-color: #CCCCCC;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+main .linux-bread-crumb ul li:nth-child(odd):hover {
+  background-color: #9b9b9b;
+}
+
+main .linux-bread-crumb ul li:nth-child(even) {
+  font-size: 18px;
+}
+
+main .linux-bread-crumb ul a {
+  font-size: 18px;
+  color: #000;
+}
+
+main h1 {
+  padding: 20px 0;
+  font-family: 'Alike', serif;
+  font-size: 40px;
+}
+
+.linux-categories  {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+
+}
+
+.linux-categories li button {
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.linux-categories li button.active {
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.linux-distro-name li {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1rem rgba(22, 22, 22, 0.1);
+}
+
+.linux-distro-name li.hidden {
+  display: none;
+}
+
+.linux-distro-name li h2 {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: 'Alike', serif;
+}
+
+/* footer stuff */
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 10px 0;
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+}
+
+footer span {
+  width: 100%;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+}
+
+::start-view-transition {
+  transition: opacity 9.5s ease-in-out;
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  header nav {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  header nav ul {
+    display: none;
+  }
+}
+
+/* ::view-transition-group(root) {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+} */
+
+/* create a zoom effect when transitioning */
+/* ::view-transition-group(root) {
+  animation: zoom 0.3s ease-in-out;
+}
+
+
+@keyframes zoom {
+  from {
+    opacity: 0;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(2);
+  }
+} */
+
+/* apply view transition to single div */
